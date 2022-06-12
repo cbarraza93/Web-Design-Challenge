@@ -10,7 +10,17 @@
     <link rel="stylesheet" href="web_style.css">
     <title>Data - 05/07/2022</title>
 
-</head>
+</head> 
+<style>
+.tableFixHead {
+  overflow-y: auto;
+  height: 106px;
+}
+.tableFixHead thead th {
+  position: sticky;
+  top: 0;
+}
+</style>
 <body>
     <nav  class="navbar navbar-expand-lg navbar-light" style = "background-color: #53acec;">
         <a class="navbar-brand" href="index.html">Home</a>
@@ -45,9 +55,10 @@
         <div class = "col-md-1"></div>
         <div class = "col-md-11">
         <div class="box-container" style = "background-color: #98c7eb; padding: 25px">
+        <div class="tableFixHead"></div>
           <center>
             <h1>Cities Data</h1>
-            <table><tr><th>City Name</th><th>Cloudiness</th><th>Country</th><th>Date</th><th>Humidity</th><th>Latitude</th><th>Longitude</th><th>Max Temp</th><th>Wind Speed</th></tr>
+            <table class="table table-striped" class="table table-bordered border-primary"><tr><th>City Name</th><th>Cloudiness</th><th>Country</th><th>Date</th><th>Humidity</th><th>Latitude</th><th>Longitude</th><th>Max Temp</th><th>Wind Speed</th></tr>
               <tr>
                 <td>Rikitea</td>
                 <td>11</td>
