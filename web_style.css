@@ -12,13 +12,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-.tableFixHead {
-  overflow-y: auto;
-  height: 106px;
-}
+
 .tableFixHead thead th {
   position: sticky;
-  top: 0;
 }
     
      
