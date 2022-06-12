@@ -43,39 +43,35 @@
     <br>
     <div class = "row">
         <div class = "col-md-1"></div>
-        <div class = "col-md-5">
+        <div class = "col-md-11">
         <div class="box-container" style = "background-color: #98c7eb; padding: 50px">
-              <h2>Wind Speed</h2>
-                  <hr>
-                  <a href="windspeed.html">
-                  <img src="assets_visualizations/Wind Speed.png" alt="Max_Temp" width = "50%">
-                  </a>
-                      <p>There is no correlation between wind speed and equator distance.</p>
+          <center>
+            <h1>Data in CSV</h1>
+            <h3>Cities Data</h3>
+      
+            <?php
+            echo "<html><body><center><table>\n\n";
+      
+            $file = fopen("Resources/cities.csv", "r");
+      
+            while (($data = fgetcsv($file)) !== false) {
+      
+                echo "<tr>";
+                foreach ($data as $i) {
+                    echo "<td>" . htmlspecialchars($i) 
+                        . "</td>";
+                }
+                echo "</tr> \n";
+            }
+      
+            fclose($file);
+      
+            echo "\n</table></center></body></html>";
+            ?>
+        </center>
         </div>
         </div>  
-        <script>
-          function format_link(link) {
-              if (link)
-                  return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-              else return "";
-          }
-  
-          CsvToHtmlTable.init({
-              csv_path: "Resources/cities.csv",
-              element: "table-container",
-              allow_download: true,
-              csv_options: {
-                  separator: ",",
-                  delimiter: '"'
-              },
-              datatables_options: {
-                  paging: false
-              },
-              custom_formatting: [
-                  [4, format_link]
-              ]
-          });
-      </script>
+
     </body>
   
   
