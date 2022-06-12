@@ -49,25 +49,15 @@
             <h1>Data in CSV</h1>
             <h3>Cities Data</h3>
       
-            <?php
-            echo "<html><body><center><table>\n\n";
-      
-            $file = fopen("Resources/cities.csv", "r");
-      
-            while (($data = fgetcsv($file)) !== false) {
-      
-                echo "<tr>";
-                foreach ($data as $i) {
-                    echo "<td>" . htmlspecialchars($i) 
-                        . "</td>";
-                }
-                echo "</tr> \n";
-            }
-      
-            fclose($file);
-      
-            echo "\n</table></center></body></html>";
-            ?>
+            <div id="CSVTable"></div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <script src="//jquerycsvtotable.googlecode.com/files/jquery.csvToTable.js"></script>
+            
+            <script>
+            $(function() {
+            $('#CSVTable').CSVToTable('Resources/cities.csv');
+            });
+            </script>
         </center>
         </div>
         </div>  
