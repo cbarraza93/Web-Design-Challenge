@@ -10,17 +10,23 @@
     <link rel="stylesheet" href="web_style.css">
     <title>Data - 05/07/2022</title>
 
+    <style>
+      .tableFixHead {
+        overflow-y: auto;
+        height: 106px;
+      }
+      .tableFixHead thead th {
+        position: sticky;
+        top: 0;
+      }
+      table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+      </style>
 </head> 
-<style>
-.tableFixHead {
-  overflow-y: auto;
-  height: 106px;
-}
-.tableFixHead thead th {
-  position: sticky;
-  top: 0;
-}
-</style>
+
 <body>
     <nav  class="navbar navbar-expand-lg navbar-light" style = "background-color: #53acec;">
         <a class="navbar-brand" href="index.html">Home</a>
@@ -53,7 +59,8 @@
     <br>
     <div class = "row">
         <div class = "col-md-1"></div>
-        <div class = "col-md-11">
+        <div class = "col-md-10">
+        <div class = "col-md-1"></div>
         <div class="box-container" style = "background-color: #98c7eb; padding: 25px">
         <div class="tableFixHead"></div>
           <center>
