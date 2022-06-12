@@ -1,9 +1,7 @@
 body  {
     background-image: url("https://www.satsig.net/world105.gif");
     background-color: #cccccc;
-    height: 500px;
     background-position: center;
-    background-size: cover;
     position: fixed;
   }
   
